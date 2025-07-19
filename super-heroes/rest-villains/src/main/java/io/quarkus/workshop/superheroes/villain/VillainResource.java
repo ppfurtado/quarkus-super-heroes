@@ -1,5 +1,6 @@
 package io.quarkus.workshop.superheroes.villain;
 
+import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
@@ -17,13 +18,11 @@ import static jakarta.ws.rs.core.MediaType.TEXT_PLAIN;
 @Path("/api/villains")
 public class VillainResource {
 
-    private final Logger logger;
-    private final VillainService villainService;
+    @Inject
+    Logger logger;
+    @Inject
+    VillainService villainService;
 
-    public VillainResource(Logger logger, VillainService villainService) {
-        this.logger = logger;
-        this.villainService = villainService;
-    }
 
     @GET
     @Path("/random")
