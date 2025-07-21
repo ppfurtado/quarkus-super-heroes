@@ -26,7 +26,6 @@ public class VillainResource {
 
     @GET
     @Path("/random")
-//    @Produces(TEXT_PLAIN)
     public RestResponse<Villain> randomVillain() {
         Villain randomVillain = villainService.findRandomVillain();
         logger.infof("Random villain found: %s", randomVillain);
@@ -83,6 +82,6 @@ public class VillainResource {
     @Path("/hello")
     @Produces(TEXT_PLAIN)
     public String hello() {
-        return "Hello Villain Resource";
+        return "Hello Villain Resource VillainResource";
     }
 }
