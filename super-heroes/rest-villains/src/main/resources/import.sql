@@ -1,5 +1,5 @@
 -- tag::adocSQL[]
-ALTER SEQUENCE villain_seq RESTART WITH 1;
+ALTER SEQUENCE villain_seq RESTART WITH 50;
 
 INSERT INTO villain(id, name, otherName, picture, powers, level)
 VALUES (nextval('villain_seq'), 'Buuccolo', 'Majin Buu',
